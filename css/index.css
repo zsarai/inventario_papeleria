@@ -1,0 +1,23 @@
+.input_text{
+	width:100%;
+	height: 40px;
+	text-align: center;
+	background-color: #002E67;
+	color:#FFF;
+	font-weight: bold;
+	font-size: 16px; 
+}
+.input_submit_btn{
+	width:100%;
+	height: 40px;
+	text-align: center;
+	background-color: #0564A6;
+	color:#FFF;
+	font-size: 16px; 
+}
+.lbl_form{
+	float: left;
+}
+select{
+	width: 100%;
+}

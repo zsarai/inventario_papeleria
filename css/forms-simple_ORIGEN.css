@@ -1,0 +1,187 @@
+
+.form-style-5{
+    max-width: 100%;
+    padding: 10px 20px;
+    background: #ccc;
+    margin: 10px auto;
+    padding: 20px;
+    background: #f4f7f8;
+    border-radius: 8px;
+    font-family: Arial;
+}
+.form-style-5 fieldset{
+    border: none;
+}
+.form-style-5 legend {
+    font-size: 1.0em;
+    margin-bottom: 5px;
+}
+.form-style-5 label {
+    display: block;
+    margin-bottom: 8px;
+}
+.form-style-5 input[type="text"],
+.form-style-5 input[type="date"],
+.form-style-5 input[type="datetime"],
+.form-style-5 input[type="email"],
+.form-style-5 input[type="number"],
+.form-style-5 input[type="search"],
+.form-style-5 input[type="time"],
+.form-style-5 input[type="url"],
+.form-style-5 textarea,
+.form-style-5 select {
+    
+    
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 0;
+    outline: 0;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+    background-color: #002E67;
+    color:#fff;
+    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 0px;
+    
+}
+.form-style-5 input[type="text"]:focus,
+.form-style-5 input[type="date"]:focus,
+.form-style-5 input[type="datetime"]:focus,
+.form-style-5 input[type="email"]:focus,
+.form-style-5 input[type="number"]:focus,
+.form-style-5 input[type="search"]:focus,
+.form-style-5 input[type="time"]:focus,
+.form-style-5 input[type="url"]:focus,
+.form-style-5 textarea:focus,
+.form-style-5 select:focus{
+    background: #ccc;
+    color: #000;
+}
+.form-style-5 select{
+    -webkit-appearance: menulist-button;
+    height:35px;
+}
+.form-style-5 .number {
+    background: #0564A6;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    border-radius: 15px 15px 15px 0px;
+}
+
+.form-style-5 input[type="submit"],
+.form-style-5 input[type="button"]
+{
+    position: relative;
+    display: block;
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    margin: 0 auto;
+    background: #0564A6;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    width: 100%;
+    border: 1px solid #0E2F76;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+}
+.form-style-5 input[type="submit"]:hover,
+.form-style-5 input[type="button"]:hover{
+    background: #444444;
+}
+
+.form-style-5 textarea{
+   resize: vertical;
+}
+
+
+
+.BtnValidar {
+    display: block;
+    height: 40px;
+    width: 100px;
+    background: #ccc;
+    border: 2px solid rgba(33, 68, 72, 0.59);
+
+    padding-top: 10px;
+
+    color: #fff;
+    text-align: center;
+    font: bold 1.2em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+        
+    background: -webkit-linear-gradient(top, #0E205F, #105799);
+    background: -moz-linear-gradient(top, #0E205F, #105799);
+    background: -o-linear-gradient(top, #0E205F, #105799);
+    background: -ms-linear-gradient(top, #0E205F, #105799);
+    background: linear-gradient(top, #0E205F, #105799);
+    
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    
+    -webkit-box-shadow: 0 2px 0 #0C1D50;
+    -moz-box-shadow: 0 2px 0 #0C1D50;
+    box-shadow: 0 2px 0 #0C1D50;
+    
+    text-shadow: 0 2px 2px rgba(255, 255, 255, 0.2);
+    
+}
+.BtnActualizar {
+    display: block;
+    height: 40px;
+    width: 130px;
+    background: #ccc;
+    border: 2px solid rgba(33, 68, 72, 0.59);
+
+    padding-top: 10px;
+
+    color: #fff;
+    text-align: center;
+    font: bold 1.2em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+        
+    background: -webkit-linear-gradient(top, #0E205F, #105799);
+    background: -moz-linear-gradient(top, #0E205F, #105799);
+    background: -o-linear-gradient(top, #0E205F, #105799);
+    background: -ms-linear-gradient(top, #0E205F, #105799);
+    background: linear-gradient(top, #0E205F, #105799);
+    
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    
+    -webkit-box-shadow: 0 2px 0 #0C1D50;
+    -moz-box-shadow: 0 2px 0 #0C1D50;
+    box-shadow: 0 2px 0 #0C1D50;
+    
+    text-shadow: 0 2px 2px rgba(255, 255, 255, 0.2);
+    
+}
+
+
+a.BtnValidar {
+    text-decoration: none;
+}
+
+
+a.BtnValidar:hover {
+    background: #3d7a80;
+    background: -webkit-linear-gradient(top, #3d7a80, #2f5f63);
+    background: -moz-linear-gradient(top, #3d7a80, #2f5f63);
+    background: -o-linear-gradient(top, #3d7a80, #2f5f63);
+    background: -ms-linear-gradient(top, #3d7a80, #2f5f63);
+    background: linear-gradient(top, #3d7a80, #2f5f63);
+}

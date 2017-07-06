@@ -1,0 +1,290 @@
+/* Main chat container */
+
+#chatContainer{/*fondo del contenedor del chat*/
+	width:510px;
+	margin:100px auto;
+	top:300px;
+	position:relative;
+}
+
+
+/* Top Bar */
+
+
+#chatTopBar{/*fondo de donde sale el usuario y el boton de salir*/
+	height:40px;
+	background:url('../img/solid_gray.jpg') repeat-x #d0d0d0;
+	border:1px solid #fff;
+	margin-bottom:15px;
+	position:relative;
+	/*color:#777;*/
+	background:#333;
+	text-shadow:1px 1px 0 #FFFFFF;
+}
+
+#chatTopBar .name{/*fondo del nombre de usuario*/
+	position:absolute;
+	top:10px;
+	left:40px;
+}
+
+#chatTopBar img{/*fondo de la imagen del usuario*/
+	left:9px;
+	position:absolute;
+	top:8px;
+}
+
+
+/* Chats */
+
+
+#chatLineHolder{/*fondo del contenedor de mensajes*/
+	background:#333;
+	height:360px;
+	width:350px;
+	margin-bottom:20px;
+}
+
+.chat{
+	background:url('../img/chat_line_bg.jpg') repeat-x #d5d5d5;
+	min-height:24px;
+	padding:6px;
+	border:1px solid #FFFFFF;
+	padding:8px 6px 4px 37px;
+	position:relative;
+	margin:0 10px 10px 0;
+}
+
+.chat:last-child{
+	margin-bottom:0;
+}
+
+.chat span{/*fondo de las letras de los mensajes (autor, mensajes y hora)*/
+	color:#777777;
+	text-shadow:1px 1px 0 #FFFFFF;
+	font-size:12px;
+}
+
+.chat .text{/*todos los mensajes y solo la hora de los que mando em usuario*/
+	color:#444444;
+	display:inline-block;
+	font-size:15px;
+	overflow:hidden;
+	vertical-align:top;
+	width:190px;
+}
+
+.chat .gravatar{/*fondo del icono de los mensajes*/
+	/*background:url('http://www.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?size=23') no-repeat;*/
+	background:url('http://intranet.seguridadneza.gob.mx/DSPM/chat4/img/ad516503a11cd5ca435acc9bb6523536?size=23') no-repeat;
+	left:7px;
+	position:absolute;
+	top:7px;
+}
+
+.chat img{/*fondo de icono de mensajes*/
+	display:block;
+	visibility:hidden;
+}
+
+.chat .time{/*fondo de la hora de mensajes*/
+	position:absolute;
+	right:10px;
+	top:12px;
+	font-size:11px;
+}
+
+.chat .author{/*fondo de nombre de autores del mensaje*/
+	margin-right:6px;
+	font-size:11px;
+}
+
+
+/* Chat User Area */
+
+
+#chatUsers{/*fondo de contenedor de usuarios conectados*/
+	background-color:#202020;
+	border:1px solid #111111;
+	height:360px;
+	position:absolute;
+	right:0;
+	top:56px;
+	width:150px;
+}
+
+#chatUsers .user{/*fondo de imagen de icono de usuarios conectados*/
+	/*background:url('http://www.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?size=30') no-repeat 1px 1px #444444;*/
+	background:url('http://intranet.seguridadneza.gob.mx/DSPM/chat4/img/ad516503a11cd5ca435acc9bb6523536?size=30') no-repeat 1px 1px #444444;
+	border:1px solid #111111;
+	float:left;
+	height:32px;
+	margin:10px 0 0 10px;
+	width:32px;
+}
+
+#chatUsers .user img{/*dondo de imagen de usuarios conectados */
+	border:1px solid #444444;
+	display:block;
+	visibility:hidden;
+
+}
+
+
+/* Bottom Bar */
+
+
+#chatBottomBar{/*fondo ce contenedor de la barra donde escribes mensaje y esta boton de enviar*/
+	background:url('../img/solid_gray.jpg') repeat-x #d0d0d0;
+	position:relative;
+	padding:10px;
+	border:1px solid #fff;
+	background:#333;
+
+}
+
+#chatBottomBar .tip{
+	position:absolute;
+	width:0;
+	height:0;
+	border:10px solid transparent;
+	border-bottom-color:#eeeeee;
+	top:-20px;
+	left:20px;
+	background-color:#333;
+}
+
+#chatContainer input{
+	background:url('../img/input_bg.jpg') repeat-x #dcdcdc;
+	height:26px;
+	font:13px/26px Calibri,Arial,sans-serif;
+	color:#777;
+	border:1px solid;
+	border-color:#c1c1c1 #eee #eee #c1c1c1;
+	text-shadow:1px 1px 0 #E4E4E4;
+	padding:0 5px;
+	margin-right:5px;
+	width:185px;
+	outline:none;
+}
+
+
+#submitForm{
+	display:none;
+	background:#333;
+}
+
+input#chatText{
+	/* The chat submit text field */
+	width:385px;
+
+}
+
+
+/* Overloading the default styles of jScrollPane */
+
+
+.jspVerticalBar{
+	background:none;
+	width:20px;
+}
+
+.jspTrack{
+	background-color:#202020;
+	border:1px solid #111111;
+	width:3px;
+	right:-10px;
+}
+
+.jspDrag {/*circulo de barra desplazadora*/
+	background:url('../img/slider.png') no-repeat;
+	width:20px;
+	left:-9px;
+	height:20px !important;
+	margin-top:-5px;
+
+}
+
+.jspDrag:hover{
+	background-position:left bottom;
+}
+
+
+/* Additional styles */
+
+
+a.logoutButton{/*boton de salir*/
+	background-color:#bbb;
+	border:1px solid #eee !important;
+	color:#FFFFFF !important;
+	font-size:12px;
+	padding:5px 9px;
+	position:absolute;
+	right:10px;
+	text-shadow:1px 1px 0 #888;
+	top:7px;
+	
+	-moz-box-shadow:0 0 7px #888 inset;
+	-webkit-box-shadow:0 0 7px #888 inset;
+	box-shadow:0 0 7px #888 inset;
+}
+
+a.logoutButton:hover{
+	text-shadow:1px 1px 0 #888;
+	
+	-moz-box-shadow:0 0 7px #666 inset;
+	-webkit-box-shadow:0 0 7px #666 inset;
+	box-shadow:0 0 7px #666 inset;
+}
+
+#chatContainer .blueButton{/*fondo de boton de enviar*/
+	background:url('../img/button_blue.png') no-repeat;
+	border:none !important;
+	color:#516D7F !important;
+	display:inline-block;
+	font-size:13px;
+	height:29px;
+	text-align:center;
+	text-shadow:1px 1px 0 rgba(255, 255, 255, 0.4);
+	width:75px;
+	margin:0;
+	cursor:pointer;
+}
+
+#chatContainer .blueButton:hover{
+	background-position:left bottom;
+}
+
+p.noChats,
+#chatUsers .count{
+	clear:both;
+	font-size:12px;
+	padding:10px;
+	text-align:center;
+	text-shadow:1px 1px 0 #111111;
+}
+
+#chatUsers .count{
+	font-size:11px;
+}
+
+.rounded{
+	color:#FFF;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+}
+
+#chatErrorMessage{
+	width:100%;
+	top:0;
+	left:0;
+	position:fixed;
+	background-color:#ab0909;
+	border-bottom:1px solid #d32a2a;
+	font-size:23px;
+	padding:16px;
+	text-align:center;
+	color:#fff;
+	text-shadow:1px 1px 0 #940f0f;
+}
