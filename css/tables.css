@@ -1,0 +1,100 @@
+tr:nth-child(odd) {
+    background-color:#EEEEEE;
+}
+tr:nth-child(even) {
+    background-color:#FFEAD5;
+}
+
+table {
+    border: 1px solid #ccc;
+    width: 100%;
+    margin:0;
+    padding:0;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  table tr {
+    border: 1px solid #ddd;
+    padding: 5px;
+  }
+
+  table th, table td {
+    padding: 6px;
+    text-align: center;
+    font-size: 13px;
+  }
+
+  table th {
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: #0564A6;
+    color: #fff;
+  }
+
+  @media screen and (max-width: 600px) {
+
+    table {
+      border: 0;
+    }
+
+    table thead {
+      display: none;
+    }
+
+    table tr {
+      margin-bottom: 10px;
+      display: block;
+      border-bottom: 2px solid #ddd;
+    }
+
+    table td {
+      display: block;
+      text-align: right;
+      font-size: 11px;
+      border-bottom: 1px dotted #ccc;
+    }
+
+    table td:last-child {
+      border-bottom: 0;
+    }
+
+    table td:before {
+      content: attr(data-label);
+      float: left;
+      text-transform: uppercase;
+      font-weight: bold;      
+      color: #0F1E46;
+    }
+  }
+.paginacion {
+  margin:20px 0;
+}
+
+.paginacion ul {
+  list-style:none;
+  text-align: center;
+}
+
+.paginacion ul li {
+  display:inline-block;
+  margin-right:10px;
+}
+
+.paginacion ul li a {
+  display:block;
+  padding:10px 20px;
+  color:#fff;
+  background:#024959;
+  text-decoration: none;
+}
+
+.paginacion ul li a:hover {
+  background:#037E8C;
+}
+
+.paginacion ul li .active {
+  background:#037E8C;
+  font-weight:bold;
+}
