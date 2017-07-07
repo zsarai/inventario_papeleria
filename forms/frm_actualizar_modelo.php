@@ -32,11 +32,6 @@
 			 ?>
 			 </select>
 
-
-			<label class="lbl_form">Codigo de la marca</label>
-		<br>
-		<input type="text" id="txt_cod_modelo_prod" name="cod_modelo_prod" id="txt_cod_marca_prod" required>
-		<br>
 		<label class="lbl_form">Descripción de la marca</label>
 		<br>
 		<input type="text" id="txt_desc_modelo_prod"  name="desc_modelo_prod" id="txt_desc_marca_prod"required>

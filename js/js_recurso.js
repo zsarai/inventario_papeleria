@@ -50,7 +50,6 @@ function updateRecurso(id_recurso)
 			}else{//si no se imprime la informacion en el elemendo con id contenedor
 				var json = $.parseJSON(data);
 				$("#txt_id_recurso").prop('value',json.id_recurso);
-				$("#txt_cod_recurso").prop('value',json.cod_recurso);
 				$("#txt_nombre_recurso").prop('value',json.nombre_recurso);
 				$("#modal_actualizar_recurso").modal('show');
 			}

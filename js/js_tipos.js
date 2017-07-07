@@ -50,7 +50,6 @@ function updateTipo(id_tipo_prod)
 				//console.log(json);
 				$("#txt_id_tipo_prod").prop('value',json.id_tipo_prod);
 				$("#cbo_id_clasif_prod").prop('value',json.id_clasif_prod);
-				$("#txt_cod_tipo_prod").prop('value',json.cod_tipo_prod);
 				$("#txt_desc_tipo_prod").prop('value',json.desc_tipo_prod);
 				$("#modal_actualizar_tipo").modal('show');
 			}

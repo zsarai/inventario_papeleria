@@ -24,7 +24,7 @@ function selectRecursos()
 	{
 		$contador++;
 		echo "<tr>
-		<td>".$fila['cod_recurso']."</td>
+		<td>".$fila['id_recurso']."</td>
 		<td>".$fila['nombre_recurso']."</td>
 		<td>
 		<button title='Actualizar' onclick='updateRecurso(".$fila['id_recurso'].");'>
@@ -47,7 +47,6 @@ function getRecurso()
 	{
 		echo json_encode(array(
 			'id_recurso' => $fila['id_recurso'],
-			'cod_recurso' => $fila ['cod_recurso'],
 			'nombre_recurso' => $fila['nombre_recurso'],
 			'error' => '0'
 			));
@@ -58,7 +57,7 @@ function getRecurso()
 
 function insertRecurso()
 {
-	if(insert("INSERT INTO recurso_prod (cod_recurso,nombre_recurso) VALUES ('$_POST[cod_recurso]','$_POST[nombre_recurso]');"))
+	if(insert("INSERT INTO recurso_prod (nombre_recurso) VALUES ($_POST[nombre_recurso]');"))
 	{
 		echo json_encode(array(
 			'msg'=>'Se insertó con éxito',
@@ -74,7 +73,7 @@ function insertRecurso()
 
 function updateRecurso()
 {
-	if(update("UPDATE recurso_prod SET cod_recurso ='$_POST[cod_recurso]', nombre_recurso='$_POST[nombre_recurso]' WHERE id_recurso = $_POST[id_recurso];"))
+	if(update("UPDATE recurso_prod SET nombre_recurso='$_POST[nombre_recurso]' WHERE id_recurso = $_POST[id_recurso];"))
 	{
 		echo json_encode(array(
 			'msg'=>'Se actualizo con éxito',
@@ -119,7 +118,6 @@ function searchRecursos()
 	{
 		$contador++;
 		echo "<tr>
-		<td>".$fila['cod_recurso']."</td>
 		<td>".$fila['nombre_recurso']."</td>
 		<td>
 		<button title='Actualizar' onclick='updateRecurso(".$fila['id_recurso'].");'>

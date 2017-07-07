@@ -19,9 +19,6 @@
 			}
 			 ?>
 		</select>
-		<label class="lbl_form">Codigo del tipo</label>
-		<br>
-		<input type="text" name="cod_tipo_prod" id="txt_cod_tipo_prod" required>
 		<br>
 		<label class="lbl_form">Descripción del tipo</label>
 		<br>

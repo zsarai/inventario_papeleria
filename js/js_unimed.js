@@ -50,7 +50,6 @@ function updateUnidad(id_uni_de_med)
 			}else{//si no se imprime la informacion en el elemendo con id contenedor
 				var json = $.parseJSON(data);
 				$("#txt_id_uni_de_med").prop('value',json.id_uni_de_med);
-				$("#txt_cod_uni_med").prop('value',json.cod_uni_med);
 				$("#txt_desc_uni_med").prop('value',json.desc_uni_med);
 				$("#modal_actualizar_unidad").modal('show');
 			}

@@ -50,7 +50,6 @@ function updateMarca(id_marca_prod)
 			}else{//si no se imprime la informacion en el elemendo con id contenedor
 				var json = $.parseJSON(data);
 				$("#txt_id_marca_prod").prop('value',json.id_marca_prod);
-				$("#txt_cod_marca_prod").prop('value',json.cod_marca_prod);
 				$("#txt_desc_marca_prod").prop('value',json.desc_marca_prod);
 				$("#modal_actualizar_marca").modal('show');
 			}

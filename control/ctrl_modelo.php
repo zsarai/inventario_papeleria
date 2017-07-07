@@ -30,7 +30,7 @@ function selectModelos()
 		echo "<tr>
 		<td>".$fila['desc_marca_prod']."</td>
 		<td>".$fila['desc_tipo_prod']."</td>
-		<td>".$fila['cod_modelo_prod']."</td>
+		<td>".$fila['id_modelo_prod']."</td>
 		<td>".$fila['desc_modelo_prod']."</td>
 		<td>
 		<button title='Actualizar' onclick='updateModelo(".$fila['id_modelo_prod'].");'>
@@ -57,7 +57,6 @@ function getModelo()
 			'id_modelo_prod' => $fila['id_modelo_prod'],
 			'id_marca_prod' => $fila['id_marca_prod'],
 			'id_tipo_prod' => $fila['id_tipo_prod'],
-			'cod_modelo_prod' => $fila ['cod_modelo_prod'],
 			'desc_modelo_prod' => $fila['desc_modelo_prod'],
 			'error' => '0'
 			));
@@ -68,7 +67,7 @@ function getModelo()
 
 function insertModelo()
 {
-	if(insert("INSERT INTO modelo_prod (id_marca_prod,id_tipo_prod, cod_modelo_prod, desc_modelo_prod) VALUES ($_POST[id_marca_prod],$_POST[id_tipo_prod],'$_POST[cod_modelo_prod]','$_POST[desc_modelo_prod]');"))
+	if(insert("INSERT INTO modelo_prod (id_marca_prod,id_tipo_prod, desc_modelo_prod) VALUES ($_POST[id_marca_prod],$_POST[id_tipo_prod],'$_POST[desc_modelo_prod]');"))
 	{
 		echo json_encode(array(
 			'msg'=>'Se insertó con éxito',
@@ -87,7 +86,6 @@ function updateModelo()
 	if(update("UPDATE modelo_prod SET 
 		id_marca_prod =$_POST[id_marca_prod], 
 		id_tipo_prod =$_POST[id_tipo_prod],
-		cod_modelo_prod ='$_POST[cod_modelo_prod]', 
 		desc_modelo_prod='$_POST[desc_modelo_prod]'
 		WHERE id_modelo_prod = $_POST[id_modelo_prod];"))
 	{
@@ -139,8 +137,7 @@ function searchModelos()
 		$contador++;
 		echo "<tr>
 		<td>".$fila['desc_marca_prod']."</td>
-		<td>".$fila['desc_tipo_prod']."</td>
-		<td>".$fila['cod_modelo_prod']."</td>
+		<td>".$fila['desc_tipo_prod']."</td
 		<td>".$fila['desc_modelo_prod']."</td>
 		<td>
 		<button title='Actualizar' onclick='updateModelo(".$fila['id_modelo_prod'].");'>

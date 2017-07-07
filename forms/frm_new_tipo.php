@@ -15,9 +15,6 @@ while($fila=mysqli_fetch_array($datos))
 </select>
 </td>
 <td>
-<input type="text" name="cod_tipo_prod" placeholder="Ingrese Código de Tipo" class="input_text" required>
-</td>
-<td>
 <input type="text" name="desc_tipo_prod" placeholder="Ingrese Descripcion de Tipo" class="input_text" required>
 </td>
 <td><input type="submit" class="input_submit_btn" value="Insertar Tipo"></td>

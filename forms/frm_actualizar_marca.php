@@ -9,10 +9,6 @@
       <div class="modal-body">
         <form method="POST" id="frm_actualizar_marca" class="form-style-5" >
 		<input type="hidden" name="id_marca_prod" id="txt_id_marca_prod" value="">
-		<label class="lbl_form">Codigo de la marca</label>
-		<br>
-		<input type="text" name="cod_marca_prod" id="txt_cod_marca_prod" required>
-		<br>
 		<label class="lbl_form">Descripción de la marca</label>
 		<br>
 		<input type="text" name="desc_marca_prod" id="txt_desc_marca_prod"required>

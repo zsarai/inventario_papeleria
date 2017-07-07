@@ -9,10 +9,6 @@
       <div class="modal-body">
         <form method="POST" id="frm_actualizar_unimed" class="form-style-5" >
 		<input type="hidden" name="id_uni_de_med" id="txt_id_uni_de_med" value="">
-		<label class="lbl_form">Codigo de la unidad de Medida</label>
-		<br>
-		<input type="text" name="cod_uni_med" id="txt_cod_uni_med" required>
-		<br>
 		<label class="lbl_form">Descripción de la Unidad de Medida</label>
 		<br>
 		<input type="text" name="desc_uni_med" id="txt_desc_uni_med"required>

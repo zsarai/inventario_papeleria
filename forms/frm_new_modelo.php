@@ -28,9 +28,6 @@
 			 </select>
 	</td>
 <td>
-<input type="text" name="cod_modelo_prod" placeholder="Ingrese Codigo de Modelo" class="input_text" required>
-</td>
-<td>
 <input type="text" name="desc_modelo_prod" placeholder="Ingrese Descripcion de Modelo" class="input_text" required>
 </td>
 <td><input type="submit" class="input_submit_btn" value="Insertar Modelo"></td>

@@ -76,7 +76,6 @@ function updateModelo(id_modelo_prod)
 				$("#txt_id_modelo_prod").prop('value',json.id_modelo_prod);
 				$("#cbo_id_marca_prod").prop('value',json.id_marca_prod);
 				$("#cbo_id_tipo_prod").prop('value',json.id_tipo_prod);
-				$("#txt_cod_modelo_prod").prop('value',json.cod_modelo_prod);
 				$("#txt_desc_modelo_prod").prop('value',json.desc_modelo_prod);
 				$("#modal_actualizar_modelo").modal('show');
 			}

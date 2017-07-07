@@ -13,7 +13,7 @@ function selectTipos()
 	$contador=0;
 	echo "<table border='1'>";
 	echo "<tr>
-	<td>Casificación</td>
+	<td>Clasificación</td>
 	<td>Codigo</td>
 	<td>Tipo</td>
 	<td>
@@ -26,7 +26,7 @@ function selectTipos()
 		$contador++;
 		echo "<tr>
 		<td>".$fila['desc_clasif_prod']."</td>
-		<td>".$fila['cod_tipo_prod']."</td>
+		<td>".$fila['id_tipo_prod']."</td>
 		<td>".$fila['desc_tipo_prod']."</td>
 		<td>
 		<button title='Actualizar' onclick='updateTipo(".$fila['id_tipo_prod'].");'>
@@ -50,7 +50,6 @@ function getTipo()
 		echo json_encode(array(
 			'id_tipo_prod' => $fila['id_tipo_prod'],
 			'id_clasif_prod' => $fila['id_clasif_prod'],
-			'cod_tipo_prod' => $fila['cod_tipo_prod'],
 			'desc_tipo_prod' => $fila ['desc_tipo_prod'],
 			'error' => '0'
 			));
@@ -62,7 +61,7 @@ function getTipo()
 function insertTipo()
 {
 	if(insert("INSERT INTO tipo_prod (id_clasif_prod,cod_tipo_prod,desc_tipo_prod) VALUES (
-		$_POST[id_clasif_prod],'$_POST[cod_tipo_prod]','$_POST[desc_tipo_prod]')"))
+		$_POST[id_clasif_prod],'$_POST[desc_tipo_prod]')"))
 	{
 		echo json_encode(array(
 			'msg'=>'Se insertó con éxito',
@@ -80,7 +79,6 @@ function updateTipo()
 {
 	if(update("UPDATE tipo_prod SET 
 		id_clasif_prod =$_POST[id_clasif_prod], 
-		cod_tipo_prod ='$_POST[cod_tipo_prod]',
 		desc_tipo_prod ='$_POST[desc_tipo_prod]'
 		WHERE id_tipo_prod = $_POST[id_tipo_prod];"))
 	{
@@ -131,7 +129,6 @@ function searchTipos()
 		$contador++;
 		echo "<tr>
 		<td>".$fila['desc_clasif_prod']."</td>
-		<td>".$fila['cod_tipo_prod']."</td>
 		<td>".$fila['desc_tipo_prod']."</td>
 		<td>
 		<button title='Actualizar' onclick='updateTipo(".$fila['id_tipo_prod'].");'>

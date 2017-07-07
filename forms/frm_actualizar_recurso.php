@@ -9,10 +9,6 @@
       <div class="modal-body">
         <form method="POST" id="frm_actualizar_recurso" class="form-style-5" >
 		<input type="hidden" name="id_recurso" id="txt_id_recurso" value="">
-		<label class="lbl_form">Codigo del recurso</label>
-		<br>
-		<input type="text" name="cod_recurso" id="txt_cod_recurso" required>
-		<br>
 		<label class="lbl_form">Descripción del recurso</label>
 		<br>
 		<input type="text" name="nombre_recurso" id="txt_nombre_recurso"required>

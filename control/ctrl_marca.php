@@ -13,8 +13,8 @@ function selectMarcas()
 	$contador=0;
 	echo "<table border='1'>";
 	echo "<tr>
-	<td>Código</td>
-	<td>Marca</td>
+	<td>Código de la Marca</td>
+	<td>Nombre de la Marca</td>
 	<td>
 	Opciones
 	</td>
@@ -24,7 +24,7 @@ function selectMarcas()
 	{
 		$contador++;
 		echo "<tr>
-		<td>".$fila['cod_marca_prod']."</td>
+		<td>".$fila['id_marca_prod']."</td>
 		<td>".$fila['desc_marca_prod']."</td>
 		<td>
 		<button title='Actualizar' onclick='updateMarca(".$fila['id_marca_prod'].");'>
@@ -47,7 +47,6 @@ function getMarca()
 	{
 		echo json_encode(array(
 			'id_marca_prod' => $fila['id_marca_prod'],
-			'cod_marca_prod' => $fila ['cod_marca_prod'],
 			'desc_marca_prod' => $fila['desc_marca_prod'],
 			'error' => '0'
 			));
@@ -58,7 +57,7 @@ function getMarca()
 
 function insertMarca()
 {
-	if(insert("INSERT INTO marca_prod (cod_marca_prod,desc_marca_prod) VALUES ('$_POST[cod_marca_prod]','$_POST[desc_marca_prod]');"))
+	if(insert("INSERT INTO marca_prod (desc_marca_prod) VALUES ('$_POST[desc_marca_prod]');"))
 	{
 		echo json_encode(array(
 			'msg'=>'Se insertó con éxito',
@@ -74,7 +73,7 @@ function insertMarca()
 
 function updateMarca()
 {
-	if(update("UPDATE marca_prod SET cod_marca_prod ='$_POST[cod_marca_prod]', desc_marca_prod='$_POST[desc_marca_prod]' WHERE id_marca_prod = $_POST[id_marca_prod];"))
+	if(update("UPDATE marca_prod SET desc_marca_prod='$_POST[desc_marca_prod]' WHERE id_marca_prod = $_POST[id_marca_prod];"))
 	{
 		echo json_encode(array(
 			'msg'=>'Se actualizo con éxito',
@@ -108,7 +107,6 @@ function searchMarcas()
 	$contador=0;
 	echo "<table border='1'>";
 	echo "<tr>
-	<td>Código</td>
 	<td>Marca</td>
 	<td>
 	Opciones
@@ -119,7 +117,6 @@ function searchMarcas()
 	{
 		$contador++;
 		echo "<tr>
-		<td>".$fila['cod_marca_prod']."</td>
 		<td>".$fila['desc_marca_prod']."</td>
 		<td>
 		<button title='Actualizar' onclick='updateMarca(".$fila['id_marca_prod'].");'>
