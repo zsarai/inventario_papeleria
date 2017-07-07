@@ -2,7 +2,7 @@
 include "conexion.php";
 switch ($_GET['e']) {
 	case 'selectClasificaciones': selectClasificaciones(); break;
-	case 'searchClasificaciones': searchCalsificaciones(); break;
+	case 'searchClasificaciones': searchClasificaciones(); break;
 	case 'insertClasificacion': insertClasificacion(); break;
 	case 'getClasificacion': getClasificacion(); break;
 	case 'updateClasificacion': updateClasificacion(); break;
