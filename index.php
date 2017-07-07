@@ -122,20 +122,20 @@
                                           Recursos                                        </a>
                                       </li>                                                         
                                        <li>
-                                        <a href="?pag=pape_prod">
-                                          Producto                                        </a>
+                                        <a href="#pag=pape_clasif" onclick="cargarClasificaciones();">
+                                          Clasificacion                                        </a>
                                       </li>  
                                        <li>
                                         <a href="#pag=pape_tipo" onclick="cargarTipos();">
                                           Tipo de producto                                        </a>
                                       </li> 
                                       <li>
-                                        <a href="?pag=pape_rep">
-                                          Reportes                                        </a>
+                                        <a href="?pag=pape_prod">
+                                           Producto                                       </a>
                                       </li> 
                                       <li>
-                                        <a href="?pag=pape_entra">
-                                          Entradas                                       </a>
+                                        <a href="?pag=pape_rep">
+                                           Reportes                                     </a>
                                       </li>                                                                                                                                    
                                                             </ul>
                                                             </li>
@@ -174,13 +174,14 @@
 <?php include"forms/frm_actualizar_tipo.php"; ?>
 <?php include"forms/frm_actualizar_recurso.php"; ?>
 <?php include"forms/frm_actualizar_unimed.php"; ?>
+<?php include"forms/frm_actualizar_clasificacion.php"; ?>
 <script type="text/javascript " src="js/indeex.js"></script>
 <script type="text/javascript " src="js/js_marcas.js"></script>
 <script type="text/javascript " src="js/js_modelos.js"></script>
 <script type="text/javascript " src="js/js_tipos.js"></script>
 <script type="text/javascript " src="js/js_recurso.js"></script>
 <script type="text/javascript " src="js/js_unimed.js"></script>
+<script type="text/javascript " src="js/js_clasificacion.js"></script>
 <?php include"forms/modal_mensaje.php"; ?>
-<!-- COMENTARIO DE PRUEBA-->
 </body>
 </html>

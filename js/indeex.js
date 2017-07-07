@@ -5,6 +5,59 @@ function init()
 	
 	cargarMarcas();
 
+	//Formulario de Insertar clasificacion
+	$("#frm_new_clasificacion").submit(function(e){
+		e.preventDefault();
+		$.ajax({
+			url: 'control/ctrl_clasif.php?e=insertClasificacion',
+			type: "POST",
+			data: new FormData(this),
+			contentType:false,
+			processData:false,
+			beforeSend:function(){
+				showMensaje('Enviando información...');
+			},
+			success:function(data){
+				console.log(data);
+				var json = $.parseJSON(data);
+				showMensaje(json.msg);
+				cargarClasificaciones();
+				$("#frm_new_clasificacion")[0].reset();
+			},
+			error:function(error){
+				console.log(error);
+			}
+		});
+	});
+
+	//Formulario de actualizar clasificacion
+	$("#frm_actualizar_clasificacion").submit(function(e){
+		e.preventDefault();
+		$.ajax({
+			url: 'control/ctrl_clasif.php?e=updateClasificacion',
+			type: "POST",
+			data: new FormData(this),
+			contentType:false,
+			processData:false,
+			beforeSend:function(){
+				showMensaje('Enviando información...');
+			},
+			success:function(data){
+				console.log(data);
+				var json = $.parseJSON(data);
+				$("#modal_actualizar_clasif").modal('hide');
+				showMensaje(json.msg);
+				cargarClasificaciones();
+				$("#frm_actualizar_clasificacion")[0].reset();
+
+			},
+			error:function(error){
+				$("#err").html(error);
+					$("#err").css('background-color', 'green');
+			}
+		});
+	});	
+
 	//Formulario de Insertar unidad de medida
 	$("#frm_new_unimed").submit(function(e){
 		e.preventDefault();
@@ -163,7 +216,7 @@ function init()
 			}
 		});
 	});
-		//Formulario de actualizar marca
+		//Formulario de actualizar modelo
 	$("#frm_actualizar_modelo").submit(function(e){
 		e.preventDefault();
 		$.ajax({
@@ -409,6 +462,33 @@ function crearFormularioUnidad()
 				showMensaje(json.msg);
 				cargarUnidades();
 				$("#frm_new_unimed")[0].reset();
+			},
+			error:function(error){
+				console.log(error);
+			}
+		});
+	});
+}
+//__________________________________________
+function crearFormularioClasificacion()
+{
+	$("#frm_new_clasificacion").submit(function(e){
+		e.preventDefault();
+		$.ajax({
+			url: 'control/ctrl_clasif.php?e=insertClasificacion',
+			type: "POST",
+			data: new FormData(this),
+			contentType:false,
+			processData:false,
+			beforeSend:function(){
+				showMensaje('Enviando información...');
+			},
+			success:function(data){
+				console.log(data);
+				var json = $.parseJSON(data);
+				showMensaje(json.msg);
+				cargarClasificaciones();
+				$("#frm_new_clasificacion")[0].reset();
 			},
 			error:function(error){
 				console.log(error);

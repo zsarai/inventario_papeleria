@@ -1,4 +1,4 @@
-<form  id="frm_new_marca">
+<form id="frm_new_marca">
 <table>
 <tr>
 <td>
@@ -8,11 +8,3 @@
 </tr>
 </table>
 </form>
-
-
-
-
-
-
-
-
