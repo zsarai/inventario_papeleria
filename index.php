@@ -130,7 +130,7 @@
                                           Tipo de producto                                        </a>
                                       </li> 
                                       <li>
-                                        <a href="?pag=pape_prod">
+                                        <a href="#pag=pape_prod" onclick="cargarProductos();">
                                            Producto                                       </a>
                                       </li> 
                                       <li>
@@ -175,6 +175,7 @@
 <?php include"forms/frm_actualizar_recurso.php"; ?>
 <?php include"forms/frm_actualizar_unimed.php"; ?>
 <?php include"forms/frm_actualizar_clasificacion.php"; ?>
+<?php include"forms/frm_actualizar_producto.php"; ?>
 <script type="text/javascript " src="js/indeex.js"></script>
 <script type="text/javascript " src="js/js_marcas.js"></script>
 <script type="text/javascript " src="js/js_modelos.js"></script>
@@ -182,6 +183,7 @@
 <script type="text/javascript " src="js/js_recurso.js"></script>
 <script type="text/javascript " src="js/js_unimed.js"></script>
 <script type="text/javascript " src="js/js_clasificacion.js"></script>
+<script type="text/javascript " src="js/js_productos.js"></script>
 <?php include"forms/modal_mensaje.php"; ?>
 </body>
 </html>

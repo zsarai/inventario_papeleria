@@ -5,6 +5,61 @@ function init()
 	
 	cargarMarcas();
 
+
+	//Formulario de Insertar producto
+	$("#frm_new_producto").submit(function(e){
+		e.preventDefault();
+		$.ajax({
+			url: 'control/ctrl_producto.php?e=insertProducto',
+			type: "POST",
+			data: new FormData(this),
+			contentType:false,
+			processData:false,
+			beforeSend:function(){
+				showMensaje('Enviando información...');
+			},
+			success:function(data){
+				console.log(data);
+				var json = $.parseJSON(data);
+				showMensaje(json.msg);
+				cargarProductos();
+				$("#frm_new_producto")[0].reset();
+			},
+			error:function(error){
+				console.log(error);
+			}
+		});
+	});
+
+	//Formulario de actualizar producto
+	$("#frm_actualizar_producto").submit(function(e){
+		e.preventDefault();
+		$.ajax({
+			url: 'control/ctrl_producto.php?e=updateProducto',
+			type: "POST",
+			data: new FormData(this),
+			contentType:false,
+			processData:false,
+			beforeSend:function(){
+				showMensaje('Enviando información...');
+			},
+			success:function(data){
+				console.log(data);
+				var json = $.parseJSON(data);
+				$("#modal_actualizar_producto").modal('hide');
+				showMensaje(json.msg);
+				cargarProductos();
+				$("#frm_actualizar_producto")[0].reset();
+
+			},
+			error:function(error){
+				$("#err").html(error);
+					$("#err").css('background-color', 'green');
+			}
+		});
+	});	
+
+
 	//Formulario de Insertar clasificacion
 	$("#frm_new_clasificacion").submit(function(e){
 		e.preventDefault();
@@ -489,6 +544,33 @@ function crearFormularioClasificacion()
 				showMensaje(json.msg);
 				cargarClasificaciones();
 				$("#frm_new_clasificacion")[0].reset();
+			},
+			error:function(error){
+				console.log(error);
+			}
+		});
+	});
+}
+//************************************
+function crearFormularioProducto()
+{
+	$("#frm_new_producto").submit(function(e){
+		e.preventDefault();
+		$.ajax({
+			url: 'control/ctrl_producto.php?e=insertProducto',
+			type: "POST",
+			data: new FormData(this),
+			contentType:false,
+			processData:false,
+			beforeSend:function(){
+				showMensaje('Enviando información...');
+			},
+			success:function(data){
+				console.log(data);
+				var json = $.parseJSON(data);
+				showMensaje(json.msg);
+				cargarProductos();
+				$("#frm_new_producto")[0].reset();
 			},
 			error:function(error){
 				console.log(error);

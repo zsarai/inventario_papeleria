@@ -60,7 +60,7 @@ function getTipo()
 
 function insertTipo()
 {
-	if(insert("INSERT INTO tipo_prod (id_clasif_prod,cod_tipo_prod,desc_tipo_prod) VALUES (
+	if(insert("INSERT INTO tipo_prod (id_clasif_prod,desc_tipo_prod) VALUES (
 		$_POST[id_clasif_prod],'$_POST[desc_tipo_prod]')"))
 	{
 		echo json_encode(array(

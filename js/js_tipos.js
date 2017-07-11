@@ -62,7 +62,7 @@ function updateTipo(id_tipo_prod)
 }
 function deleteTipo(id_tipo_prod)
 {
-	if(confirm("¿Realmente desea eleminar este registro?"))
+	if(confirm("¿Realmente desea eliminar este registro?"))
 	{
 		$.ajax({
 		url:"control/ctrl_tipo.php?e=deleteTipo&id_tipo_prod="+id_tipo_prod,

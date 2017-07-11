@@ -57,7 +57,7 @@ function getRecurso()
 
 function insertRecurso()
 {
-	if(insert("INSERT INTO recurso_prod (nombre_recurso) VALUES ($_POST[nombre_recurso]');"))
+	if(insert("INSERT INTO recurso_prod (nombre_recurso) VALUES ('$_POST[nombre_recurso]');"))
 	{
 		echo json_encode(array(
 			'msg'=>'Se insertó con éxito',
