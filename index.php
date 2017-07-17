@@ -157,7 +157,7 @@
     
   </div>
 </form> 
-            
+  <a href="#" onclick="eliminarSesion();">Eliminar sesión</a>          
 <form method="post" action="" id="formBusqueda" class="form-style-5" >
 <div id="contenedor_buscador">
     <input type="text" name="busca" id="busqueda" onkeyup="buscarMarca(this.value);" placeholder="Buscar ... ">
@@ -169,7 +169,8 @@
 </div>
 
 
-<div id="contenedor"> </div>
+<div id="contenedor" style="overflow: scroll;overflow-x:hidden; height: 400px;"> 
+</div>
 
 <br>
 <?php include"forms/frm_actualizar_marca.php"; ?>
@@ -179,6 +180,7 @@
 <?php include"forms/frm_actualizar_unimed.php"; ?>
 <?php include"forms/frm_actualizar_clasificacion.php"; ?>
 <?php include"forms/frm_actualizar_producto.php"; ?>
+<?php include"forms/frm_ver_solicitud.php"; ?>
 <script type="text/javascript " src="js/indeex.js"></script>
 <script type="text/javascript " src="js/js_marcas.js"></script>
 <script type="text/javascript " src="js/js_modelos.js"></script>
@@ -188,6 +190,23 @@
 <script type="text/javascript " src="js/js_clasificacion.js"></script>
 <script type="text/javascript " src="js/js_productos.js"></script>
 <script type="text/javascript " src="js/js_generar_solicitudes.js"></script>
+<script type="text/javascript">
+var nosalir=false;
+function DisplayExitSplash() {
+    if (nosalir == false) {
+    if(confirm(''))
+    {
+     die();
+    }
+    return '';
+    }
+}
+window.onbeforeunload=DisplayExitSplash;
+</script>
+
 <?php include"forms/modal_mensaje.php"; ?>
+
+
+
 </body>
 </html>

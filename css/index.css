@@ -21,3 +21,10 @@
 select{
 	width: 100%;
 }
+#contenedor{
+	width: 100%;
+    overflow: scroll;
+    overflow-x:hidden; 
+    height: 400px;
+    background-color: green;
+}
