@@ -3,6 +3,9 @@
 <table>
 
 <tr>
+<td>
+<input type="text" name="cod_producto" placeholder="Ingrese Codigo del Producto" class="input_text" required>
+</td>
 	<td>
 		<select name="id_modelo_prod" class="form-control" style="background-color:#002E67; color: white;">
 			<option value="0">--Selecciona Modelo--</option>
@@ -39,6 +42,7 @@
 			 ?>
 			 </select>
 	</td>
+	<tr>
 <td>
 <input type="text" name="desc_producto" placeholder="Ingrese Descripcion del Producto" class="input_text" required>
 </td>
