@@ -88,13 +88,15 @@
                                                             </ul>
                                       </li>
                         </ul>
-              </li>    
+              </li>  
+
+              <li><a href="#"> Generar Solicitudes        <span class="drop-icon"></span>
+        <label title="Toggle Drop-down" class="drop-icon" for="pl_1"> </label>  
      
     <li><a href="#"> Almacen Inventarios        <span class="drop-icon"></span>
         <label title="Toggle Drop-down" class="drop-icon" for="pl_11"></label>            
       
-        </a>
-                
+        </a>                
                   
           <input type="checkbox" id="pl_11">
           <ul class="sub-menu">  
@@ -142,6 +144,7 @@
                         </ul>
               </li>    
     </ul>
+
 </nav><script>
   $('#btn_Buscar').unbind('click'); 
 </script>

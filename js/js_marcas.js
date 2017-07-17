@@ -1,7 +1,7 @@
-function cargarMarcas()
+function cargarMarcas() //Creo una funcion que se llemara cargar marcas es donde me saldran todas las existentes
 {
-	$.ajax({
-		url:"control/ctrl_marca.php?e=selectMarcas",
+	$.ajax({ //creo mi metodo ajax
+		url:"control/ctrl_marca.php?e=selectMarcas", //tengo un archivo que se llama ctrl_marca que es donde tengo mi consulta a la tabla 
 		type:"POST",
 		data:null,
 		contentType:false,
@@ -10,7 +10,7 @@ function cargarMarcas()
 			$("#contenedor_buscador").html('<input type="text" name="busca" id="busqueda" onkeyup="buscarMarca(this.value);" placeholder="Buscar ... ">');
 			$.post('forms/frm_new_marca.php',{},function(data){ 
 				$("#contenedor_formulario").html(data); 
-				crearFormularioMarca();
+				crearFormularioMarca(); //este es mi contenedor donde busca la marca o lo que tengo en la tabla
 			});
 			
 
@@ -94,10 +94,10 @@ function deleteMarca(id_marca_prod)
 	}
 }
 
-function buscarMarca(valor)
+function buscarMarca(valor) //Creo la funcion para buscar 
 {
 	$.ajax({
-		url:"control/ctrl_marca.php?e=searchMarcas&valor="+valor,
+		url:"control/ctrl_marca.php?e=searchMarcas&valor="+valor, //Mando a llamar del documento de ctrl el metodo de search que busca igual 
 		type:"POST",
 		data:null,
 		contentType:false,

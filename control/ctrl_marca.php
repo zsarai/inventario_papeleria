@@ -1,6 +1,6 @@
 <?php 
 include "conexion.php";
-switch ($_GET['e']) {
+switch ($_GET['e']) { 
 	case 'selectMarcas': selectMarcas(); break;
 	case 'searchMarcas': searchMarcas(); break;
 	case 'insertMarca': insertMarca(); break;
@@ -13,24 +13,24 @@ function selectMarcas()
 	$contador=0;
 	echo "<table border='1'>";
 	echo "<tr>
-	<td>Código de la Marca</td>
+	<td>Código de la Marca</td> 
 	<td>Nombre de la Marca</td>
 	<td>
-	Opciones
+	Opciones 
 	</td>
 	</tr>";
-	$datos = select("SELECT * FROM marca_prod");
+	$datos = select("SELECT * FROM marca_prod"); 
 	while($fila=mysqli_fetch_array($datos))
 	{
 		$contador++;
 		echo "<tr>
-		<td>".$fila['id_marca_prod']."</td>
+		<td>".$fila['id_marca_prod']."</td> 
 		<td>".$fila['desc_marca_prod']."</td>
 		<td>
-		<button title='Actualizar' onclick='updateMarca(".$fila['id_marca_prod'].");'>
+		<button title='Actualizar' onclick='updateMarca(".$fila['id_marca_prod'].");'> 
 		<span class='icon-loop2'></span>
 		</button>
-		<button title='Eliminar' onclick='deleteMarca(".$fila['id_marca_prod'].");'>
+		<button title='Eliminar' onclick='deleteMarca(".$fila['id_marca_prod'].");'> 
 		<span class='icon-bin'></span>
 		</button>
 		</td>
