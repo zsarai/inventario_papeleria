@@ -50,12 +50,15 @@
 <input type="text" name="obser_producto" placeholder="Ingrese Observaciones del Producto" class="input_text" required>
 </td>
 <td>
-<input type="text" name="recep_cant_proc" placeholder="Ingrese Cantidad de Recepcion" class="input_text" required>
+<input type="number" name="recep_cant_proc" placeholder="Ingrese Cantidad de Recepcion" class="input_text" required>
 </td>
 <td>
-<input type="text" name="prod_rec_status" placeholder="Seleccione Estatus" class="input_text" required>
+<select name="prod_rec_status" class="form-control" style="background-color:#002E67; color: white;">
+<option value="0">--Seleccione un Status--</option>
+<option value="A">Activo</option>
+<option value="I">Inactivo</option>
+</select>
 </td>
-
 <td><input type="submit" class="input_submit_btn" value="Insertar Producto"></td>
 </tr>
 

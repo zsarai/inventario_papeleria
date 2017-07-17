@@ -81,8 +81,9 @@ function getProducto()
 
 function insertProducto()
 {
-	if(insert("INSERT INTO producto (cod_producto, id_modelo_prod, id_uni_de_med, id_recurso, desc_producto, obser_producto, recep_cant_proc, prod_rec_status) 
-		VALUES ('$_POST[cod_producto]',$_POST[id_modelo_prod],$_POST[id_uni_de_med],$_POST[id_recurso],'$_POST[desc_producto]','$_POST[obser_producto]',$_POST[recep_cant_proc]),'$_POST[prod_rec_status]';"))
+	$consulta="INSERT INTO producto (cod_producto, id_modelo_prod, id_uni_de_med, id_recurso, desc_producto, obser_producto, recep_cant_proc, prod_rec_status) 
+		VALUES ('$_POST[cod_producto]',$_POST[id_modelo_prod],$_POST[id_uni_de_med],$_POST[id_recurso],'$_POST[desc_producto]','$_POST[obser_producto]',$_POST[recep_cant_proc],'$_POST[prod_rec_status]');";
+	if(insert($consulta))
 	{
 		echo json_encode(array(
 			'msg'=>'Se insertó con éxito',
@@ -90,7 +91,7 @@ function insertProducto()
 		));
 	}else{
 		echo json_encode(array(
-			'msg'=>'Ocurrió un error durante la operación',
+			'msg'=>'Ocurrió un error durante la operación '.$consulta,
 			'error' =>'1'
 		));
 	}

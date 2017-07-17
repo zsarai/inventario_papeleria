@@ -566,7 +566,6 @@ function crearFormularioProducto()
 				showMensaje('Enviando información...');
 			},
 			success:function(data){
-				console.log(data);
 				var json = $.parseJSON(data);
 				showMensaje(json.msg);
 				cargarProductos();
