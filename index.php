@@ -90,7 +90,7 @@
                         </ul>
               </li>  
 
-              <li><a href="#"> Generar Solicitudes        <span class="drop-icon"></span>
+              <li><a href="#" onclick="cargarGenerarSolicitudes();"> Generar Solicitudes<span class="drop-icon"></span>
         <label title="Toggle Drop-down" class="drop-icon" for="pl_1"> </label>  
      
     <li><a href="#"> Almacen Inventarios        <span class="drop-icon"></span>
@@ -187,6 +187,7 @@
 <script type="text/javascript " src="js/js_unimed.js"></script>
 <script type="text/javascript " src="js/js_clasificacion.js"></script>
 <script type="text/javascript " src="js/js_productos.js"></script>
+<script type="text/javascript " src="js/js_generar_solicitudes.js"></script>
 <?php include"forms/modal_mensaje.php"; ?>
 </body>
 </html>
