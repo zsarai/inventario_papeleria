@@ -191,7 +191,7 @@
 <script type="text/javascript " src="js/js_productos.js"></script>
 <script type="text/javascript " src="js/js_generar_solicitudes.js"></script>
 <script type="text/javascript">
-var nosalir=false;
+/*var nosalir=false;
 function DisplayExitSplash() {
     if (nosalir == false) {
     if(confirm(''))
@@ -201,7 +201,7 @@ function DisplayExitSplash() {
     return '';
     }
 }
-window.onbeforeunload=DisplayExitSplash;
+window.onbeforeunload=DisplayExitSplash;*/
 </script>
 
 <?php include"forms/modal_mensaje.php"; ?>

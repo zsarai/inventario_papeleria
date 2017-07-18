@@ -13,7 +13,7 @@
         <table style="width:100%" border="">
           <tr>
             <td>
-            <button class="input_submit_btn" onclick="enviarSolicitud();">
+            <button class="input_submit_btn" onclick="imprimirSolicitud();">
               <span class="icon-file-pdf"></span>
               Imprimir solicitud
             </button>

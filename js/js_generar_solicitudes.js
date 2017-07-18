@@ -60,6 +60,22 @@ function verSolicitud()
 	});
 }
 }
+function imprimirSolicitud()
+{
+	if(confirm("¿Confirmar el envio de información?"))
+	{
+		$.post('control/ctrl_solicitud.php?e=insertSolicitud',{},function(data){
+			window.open("control/pdf_solicitud.php?id_resguardo="+data);
+			$.post('control/ctrl_solicitud.php?e=eliminarSesion',{
+			},function(data){
+				$("#modal_ver_solicitud").modal('hide');
+				contadorProducto=0;
+				cargarGenerarSolicitudes();
+			});
+			
+		});
+	}
+}
 function eliminarItem(valor)
 {
 	$.post('control/ctrl_solicitud.php?e=eliminarItem',{valor:valor},function(data){

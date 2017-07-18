@@ -9,6 +9,7 @@ switch ($_GET['e']) {
 	case 'verProductos': verProductos(); break;
 	case 'eliminarSesion': eliminarSesion(); break;
 	case 'eliminarItem': eliminarItem(); break;
+	case 'insertSolicitud': insertSolicitud(); break;
 }
 function cargarUsuarios()
 {
@@ -84,7 +85,38 @@ function verProductos()
 }
 function insertSolicitud()
 {
-	for ($i=0; $i < count($_SESSION); $i++) { 
+	//include "conexion.php";
+	session_start();
+	//inserta datos de los usuarios
+	if(insert("INSERT INTO resguardo_prod (pers_cod,are_cod,fecha_entrega,users_cod) VALUES (
+		'$_SESSION[pers_cod]','$_SESSION[are_cod]','".date('Y-m-d H:i:s')."','Código de usuario');"))
+	{
+		$datos = select("SELECT max(id_resguardo) as id_resguardo FROM resguardo_prod");
+		if($fila=mysqli_fetch_array($datos))
+		{
+			$id_resguardo_fk=$fila['id_resguardo'];//ultimo id insertado para el rompimiento
+			for ($i=0; $i < count($_SESSION); $i++)
+			{
+				if(isset($_SESSION["producto_".$i]))
+				{
+					$porciones = explode("/",$_SESSION["producto_".$i]);
+					if(insert("INSERT INTO gencod_producto (cod_producto,gencod_prod_consec,gencod_status) VALUES 
+					('$porciones[0]','NPI','X')"))
+					{
+						$consulta="INSERT INTO romp (id_gencod_prod_fk,id_resguardo_fk,cant_prod) VALUES (
+							(SELECT max(id_gencod_prod) FROM gencod_producto ),".$id_resguardo_fk.",$porciones[1])";
+						
+						if(insert($consulta))
+						{
+							
+						}
+					}
+				}
+			}
+			echo $id_resguardo_fk;
+		}
+	}
+	/*for ($i=0; $i < count($_SESSION); $i++) { 
 		if(isset($_SESSION["producto_".$i]))
 		{
 			$porciones = explode("/",$_SESSION["producto_".$i]);
@@ -96,10 +128,15 @@ function insertSolicitud()
 				//date('Y-m-d H:i:s'); '9999-12-31 23:59:59'
 				//$_SESSION['pers_cod'] // id del solicitande
 				//$_SESSION['are_cod'] // del solicitante
+				if(insert("INSERT INTO resguardo_prod (pers_cod,are_cod,fecha_entrega,users_cod) VALUES (
+				'$_SESSION[pers_cod]','$_SESSION[are_cod]','".date('Y-m-d H:i:s')."','Código de usuario');"))
+				{
+
+				}
 			}
 			
 		}		
-	}
+	}*/
 }
 function eliminarSesion()
 {

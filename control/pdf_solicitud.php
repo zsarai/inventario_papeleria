@@ -15,7 +15,7 @@ class Pdf extends FPDF
 		$this->SetFont('Arial','B',10,0,1);
 		$this->Cell(0,10,utf8_decode('DIRECCIÓN GENERAL DE SEGURIDAD CIUDADANA'),0,1,'C');
 		$this->SetFont('Arial','',10,0,1);
-		$this->Cell(0,50,utf8_decode('Nezahualcoyotl, Estado de Mexico a '.strftime("%d de ".$this->getMes(date("m"))." de %Y .")),0,1,'R');
+		$this->Cell(0,50,utf8_decode('Nezahualcóyotl, Estado de México a '.strftime("%d de ".$this->getMes(date("m"))." de %Y .")),0,1,'R');
 		
 		
 		
@@ -69,7 +69,7 @@ $pdf->SetFont('Arial','BI',12,0,1);
 $pdf->Cell(-76,-10,utf8_decode(' se realiza la entrega del siguiente material.'),0,0,'R');
 $pdf->SetFont('Arial','',12,0,1);
 $pdf->Cell(-80,-10,utf8_decode('Así mismo se hace de su conocimiento'),0,1,'L');
-$pdf->Cell(0,20,utf8_decode('que deberá ser utilizado en cuestiones de caracter   estríctamente oficial:'),0,1,'L');
+$pdf->Cell(0,20,utf8_decode('que deberá ser utilizado en cuestiones de carácter   estrictamente oficial:'),0,1,'L');
 $pdf->SetFillColor(216,216,216);
 $pdf->SetFont('Arial','B',12);
 $pdf->Cell(40,5,utf8_decode('Cantidad'),1,0,'C',true);
