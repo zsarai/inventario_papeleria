@@ -100,13 +100,13 @@ function insertProducto()
 function updateProducto()
 {
 	if(update("UPDATE producto SET 
-		cod_producto =$_POST[cod_producto],
+		cod_producto ='$_POST[cod_producto]',
 		id_modelo_prod =$_POST[id_modelo_prod],
 		id_uni_de_med =$_POST[id_uni_de_med],
 		id_recurso =$_POST[id_recurso],
-		desc_producto =$_POST[desc_producto], 
-		obser_producto =$_POST[obser_producto],
-		recep_cant_proc =$_POST[recep_cant_proc],
+		desc_producto ='$_POST[desc_producto]', 
+		obser_producto ='$_POST[obser_producto]',
+		recep_cant_proc ='$_POST[recep_cant_proc]',
 		prod_rec_status='$_POST[prod_rec_status]'
 		WHERE cod_producto = $_POST[cod_producto];"))
 	{
