@@ -42,10 +42,10 @@ function selectProductos()
 		<td>".$fila['recep_cant_proc']."</td>
 		<td>".$fila['prod_rec_status']."</td>
 		<td>
-		<button title='Actualizar' onclick='updateProducto(".$fila['cod_producto'].");'>
+		<button title='Actualizar' onclick='updateProducto(\"".$fila['cod_producto']."\");'>
 		<span class='icon-loop2'></span>
 		</button>
-		<button title='Eliminar' onclick='deleteProducto(".$fila['cod_producto'].");'>
+		<button title='Eliminar' onclick='deleteProducto(\"".$fila['cod_producto']."\");'>
 		<span class='icon-bin'></span>
 		</button>
 		</td>
@@ -106,9 +106,9 @@ function updateProducto()
 		id_recurso =$_POST[id_recurso],
 		desc_producto ='$_POST[desc_producto]', 
 		obser_producto ='$_POST[obser_producto]',
-		recep_cant_proc ='$_POST[recep_cant_proc]',
+		recep_cant_proc =$_POST[recep_cant_proc],
 		prod_rec_status='$_POST[prod_rec_status]'
-		WHERE cod_producto = $_POST[cod_producto];"))
+		WHERE cod_producto = '$_POST[cod_producto]';"))
 	{
 		echo json_encode(array(
 			'msg'=>'Se actualizo con éxito',
@@ -123,7 +123,7 @@ function updateProducto()
 }
 function deleteProducto()
 {
-	if(update("DELETE FROM producto WHERE cod_producto=$_GET[cod_producto]"))
+	if(update("DELETE FROM producto WHERE cod_producto='$_GET[cod_producto]'"))
 	{
 		echo json_encode(array(
 			'msg'=>'Se elimino con éxito',
@@ -171,10 +171,10 @@ function searchProductos()
 		<td>".$fila['recep_cant_proc']."</td>
 		<td>".$fila['prod_rec_status']."</td
 		<td>
-		<button title='Actualizar' onclick='updateProducto(".$fila['cod_producto'].");'>
+		<button title='Actualizar' onclick='updateProducto(\"".$fila['cod_producto']."\");'>
 		<span class='icon-loop2'></span>
 		</button>
-		<button title='Eliminar' onclick='deleteProducto(".$fila['cod_producto'].");'>
+		<button title='Eliminar' onclick='deleteProducto(\"".$fila['cod_producto']."\");'>
 		<span class='icon-bin'></span>
 		</button>
 		</td>

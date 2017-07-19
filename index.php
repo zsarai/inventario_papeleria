@@ -76,17 +76,17 @@
           <ul class="sub-menu">  
                  
               <li>
-                <a href="#">Ayuda                    <span class="drop-icon"></span>
+                <a href="#">Ayuda<span class="drop-icon"></span>
                     <label title="Toggle Drop-down" class="drop-icon" for="md_4">  </label>
                 </a>
-                                              <input type="checkbox" id="md_4">
+                  <input type="checkbox" id="md_4">
                         <ul class="sub-menu">
-                                                              <li>
-                                        <a href="?pag=cti_user">
-                                          Perfil                                        </a>
-                                      </li>                                                                
-                                                            </ul>
-                                      </li>
+                      <li>
+                        <a href="?pag=cti_user">
+                          Perfil </a>
+                             </li>                                                                
+                            </ul>
+                             </li>
                         </ul>
               </li>  
 
@@ -102,47 +102,49 @@
           <ul class="sub-menu">  
                  
               <li>
-                <a href="#">Catalogos                    <span class="drop-icon"></span>
+                <a href="#">Catalogos<span class="drop-icon"></span>
                     <label title="Toggle Drop-down" class="drop-icon" for="md_34">  </label>
                 </a>
-                                              <input type="checkbox" id="md_34">
+                    <input type="checkbox" id="md_34">
                         <ul class="sub-menu">
-                                                              <li>
-                                        <a href="#pag=pape_marc" onclick="cargarMarcas();">
-                                          Marca                                        </a>
+                           <li>
+                            <a href="#pag=pape_marc" onclick="cargarMarcas();">
+                              Marca </a>
                                       </li>                                                                
-                                                                          <li>
+                                       <li>
                                         <a href="#pag=pape_mod" onclick="cargarModelos();" >
-                                          Modelo                                        </a>
+                                          Modelo</a>
                                       </li>                                                                
-                                                                          <li>
+                                      <li>
                                         <a href="#pag=pape_unimed" onclick="cargarUnidades();">
-                                          Unidad de medida                                        </a>
+                                          Unidad de medida</a>
                                       </li>                                                                
-                                                                          <li>
+                                       <li>
                                         <a href="#pag=pape_rec" onclick="cargarRecursos();">
-                                          Recursos                                        </a>
+                                          Recursos</a>
                                       </li>                                                         
                                        <li>
                                         <a href="#pag=pape_clasif" onclick="cargarClasificaciones();">
-                                          Clasificacion                                        </a>
+                                          Clasificacion</a>
                                       </li>  
                                        <li>
                                         <a href="#pag=pape_tipo" onclick="cargarTipos();">
-                                          Tipo de producto                                        </a>
+                                          Tipo de producto</a>
                                       </li> 
                                       <li>
                                         <a href="#pag=pape_prod" onclick="cargarProductos();">
-                                           Producto                                       </a>
+                                           Producto</a>
                                       </li> 
                                       <li>
                                         <a href="?pag=pape_rep">
-                                           Reportes                                     </a>
+                                           Reportes</a>
                                       </li>                                                                                                                                    
-                                                            </ul>
-                                                            </li>
+                                      </ul>
+                                      </li>
                         </ul>
-              </li>    
+              </li> 
+              <li><a href="#" onclick="cargarSolicitudes();">Reportes<span class="drop-icon"></span>
+        <label title="Toggle Drop-down" class="drop-icon" for="pl_1"> </label>   
     </ul>
 
 </nav><script>
@@ -191,7 +193,7 @@
 <script type="text/javascript " src="js/js_productos.js"></script>
 <script type="text/javascript " src="js/js_generar_solicitudes.js"></script>
 <script type="text/javascript">
-/*var nosalir=false;
+var nosalir=false;
 function DisplayExitSplash() {
     if (nosalir == false) {
     if(confirm(''))
@@ -201,7 +203,7 @@ function DisplayExitSplash() {
     return '';
     }
 }
-window.onbeforeunload=DisplayExitSplash;*/
+window.onbeforeunload=DisplayExitSplash;
 </script>
 
 <?php include"forms/modal_mensaje.php"; ?>

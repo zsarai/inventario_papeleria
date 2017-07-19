@@ -15,7 +15,7 @@ function selectModelos()
 	echo "<tr>
 	<td>Marca</td>
 	<td>Tipo</td>
-	<td>Código</td>
+	<td>Código</td>.,
 	<td>Modelo</td>
 	<td>
 	Opciones

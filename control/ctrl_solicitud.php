@@ -60,7 +60,9 @@ function verProductos()
 		if(isset($_SESSION["producto_".$i]))
 		{
 			$porciones = explode("/",$_SESSION["producto_".$i]);
-			$datos = select("SELECT * FROM producto p LEFT JOIN unidad_de_med_prod udmp ON p.id_uni_de_med=udmp.id_uni_de_med WHERE p.cod_producto='$porciones[0]'");
+			$datos = select("SELECT * FROM producto p 
+				LEFT JOIN unidad_de_med_prod udmp ON p.id_uni_de_med=udmp.id_uni_de_med 
+				WHERE p.cod_producto='$porciones[0]'");
 			if($fila=mysqli_fetch_array($datos))
 			{
 				echo "<tr>";

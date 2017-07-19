@@ -170,7 +170,12 @@ function init()
 	//Formulario de InsertarRecurso
 	$("#frm_new_recurso").submit(function(e){
 		e.preventDefault();
-		$.ajax({
+
+			if($("#id_recurso").prop('value').length <= 0)
+			{ showMensaje("Ingrese nombre");;
+			}else {
+
+				$.ajax({
 			url: 'control/ctrl_recurso.php?e=insertRecurso',
 			type: "POST",
 			data: new FormData(this),
@@ -190,6 +195,8 @@ function init()
 				console.log(error);
 			}
 		});
+			};
+		
 	});
 
 	//Formulario de actualizar recurso
