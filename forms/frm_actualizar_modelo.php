@@ -10,19 +10,19 @@
       <div class="modal-body">
         <form method="POST" id="frm_actualizar_modelo" class="form-style-5" >
 			<input type="text" id="txt_id_modelo_prod" name="id_modelo_prod">
+        	
         	<select name="id_marca_prod" id="cbo_id_marca_prod" class="form-control" style="background-color:#002E67; color: white;">
-			
 			<?php 
 			$datos=select("SELECT * FROM marca_prod");
 			while($fila=mysqli_fetch_array($datos))
 			{
 				echo"<option value='$fila[id_marca_prod]'>$fila[desc_marca_prod]</option>";
 			}
-			 ?>
+			?>
 			</select>
 			<br>
-			<select name="id_tipo_prod" id="cbo_id_tipo_prod" class="form-control" style="background-color:#002E67; color: white;">
 			
+			<select name="id_tipo_prod" id="cbo_id_tipo_prod" class="form-control" style="background-color:#002E67; color: white;">
 			<?php 
 			$datos=select("SELECT * FROM tipo_prod");
 			while($fila=mysqli_fetch_array($datos))

@@ -11,7 +11,6 @@
 			<input type="text" id="txt_cod_producto" name="cod_producto">
 
         	<select name="id_modelo_prod" id="cbo_id_modelo_prod" class="form-control" style="background-color:#002E67; color: white;">
-			
 			<?php 
 			$datos=select("SELECT * FROM modelo_prod");
 			while($fila=mysqli_fetch_array($datos))
@@ -23,7 +22,6 @@
 			<br>
 
 			<select name="id_uni_de_med" id="cbo_id_uni_de_med" class="form-control" style="background-color:#002E67; color: white;">
-			
 			<?php 
 			$datos=select("SELECT * FROM unidad_de_med_prod");
 			while($fila=mysqli_fetch_array($datos))
@@ -35,7 +33,6 @@
 			 <br>
 
 			<select name="id_recurso" id="cbo_id_recurso" class="form-control" style="background-color:#002E67; color: white;">
-			
 			<?php 
 			$datos=select("SELECT * FROM recurso_prod");
 			while($fila=mysqli_fetch_array($datos))

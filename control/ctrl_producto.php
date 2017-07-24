@@ -82,7 +82,14 @@ function getProducto()
 function insertProducto()
 {
 	$consulta="INSERT INTO producto (cod_producto, id_modelo_prod, id_uni_de_med, id_recurso, desc_producto, obser_producto, recep_cant_proc, prod_rec_status) 
-		VALUES ('$_POST[cod_producto]',$_POST[id_modelo_prod],$_POST[id_uni_de_med],$_POST[id_recurso],'$_POST[desc_producto]','$_POST[obser_producto]',$_POST[recep_cant_proc],'$_POST[prod_rec_status]');";
+		VALUES ('$_POST[cod_producto]',
+			$_POST[id_modelo_prod],
+			$_POST[id_uni_de_med],
+			$_POST[id_recurso],
+			'$_POST[desc_producto]',
+			'$_POST[obser_producto]',
+			$_POST[recep_cant_proc],
+			'$_POST[prod_rec_status]');";
 	if(insert($consulta))
 	{
 		echo json_encode(array(
@@ -123,7 +130,7 @@ function updateProducto()
 }
 function deleteProducto()
 {
-	if(update("DELETE FROM producto WHERE cod_producto='$_GET[cod_producto]'"))
+	if(update("DELETE FROM producto WHERE cod_producto='$_GET[cod_producto]';"))
 	{
 		echo json_encode(array(
 			'msg'=>'Se elimino con éxito',
@@ -132,7 +139,7 @@ function deleteProducto()
 	}else{
 		echo json_encode(array(
 			'msg'=>'Ocurrió un error durante la operación',
-			'error' =>'1','consulta'=>"DELETE FROM producto WHERE cod_producto=$_GET[cod_producto]"
+			'error' =>'1','consulta'=>"DELETE FROM producto WHERE cod_producto=$_GET[cod_producto];"
 		));
 	}
 }
