@@ -143,7 +143,7 @@
                                       </li>
                         </ul>
               </li> 
-              <li><a href="#" onclick="cargarSolicitudes();">Reportes<span class="drop-icon"></span>
+              <li><a href="#" onclick=>Reportes<span class="drop-icon"></span>
         <label title="Toggle Drop-down" class="drop-icon" for="pl_1"> </label>   
     </ul>
 
@@ -183,6 +183,7 @@
 <?php include"forms/frm_actualizar_clasificacion.php"; ?>
 <?php include"forms/frm_actualizar_producto.php"; ?>
 <?php include"forms/frm_ver_solicitud.php"; ?>
+<?php include"forms/frm_reporte.php"; ?>
 
 <script type="text/javascript " src="js/indeex.js"></script>
 <script type="text/javascript " src="js/js_marcas.js"></script>
@@ -193,6 +194,7 @@
 <script type="text/javascript " src="js/js_clasificacion.js"></script>
 <script type="text/javascript " src="js/js_productos.js"></script>
 <script type="text/javascript " src="js/js_generar_solicitudes.js"></script>
+<script type="text/javascript " src="js/js_reporte.js"></script>
 
 <script type="text/javascript">
 var nosalir=false;
