@@ -7,7 +7,7 @@
         <h4 class="modal-title" id="myModalLabel">Solicitud</h4>
       </div>
       <div class="modal-body" id="contenedor_solicitud">
-        Contenid
+        Contenido
       </div>
       <div class="modal-footer">
         <table style="width:100%" border="">

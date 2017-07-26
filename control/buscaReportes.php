@@ -15,7 +15,7 @@ if(isset($hasta)==false){
 
 //EJECUTAMOS LA CONSULTA DE BUSQUEDA
 
-$registro = mysql_query("SELECT * FROM resguardo_prod WHERE fecha_entrega BETWEEN '$desde' AND '$hasta' ORDER BY id_prod ASC");
+$registro = mysql_query("SELECT * FROM resguardo_prod WHERE fecha_entrega BETWEEN '$desde' AND '$hasta' ORDER BY id_resguardo ASC");
 
 //CREAMOS NUESTRA VISTA Y LA DEVOLVEMOS AL AJAX
 

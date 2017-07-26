@@ -1,8 +1,9 @@
-<?php include'../control/conexion.php'; ?>
+<?php //include'scontrol/conexion.php'; ?>
 
     <table border="0" align="center">
     	<tr>
-        	<td width="335"><input type="text" placeholder="Busca un producto por: Nombre o Tipo" id="bs-prod"/></td>
+        	<td width="335"><input type="text" placeholder="Buscar por Area" id="bs-prod"/></td>
+            <td>Desde&nbsp;&nbsp;&nbsp;&nbsp;</td>
             <td><input type="date" id="bd-desde"/></td>
             <td>Hasta&nbsp;&nbsp;&nbsp;&nbsp;</td>
             <td><input type="date" id="bd-hasta"/></td>

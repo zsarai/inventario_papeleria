@@ -1,5 +1,7 @@
 <?php
 
+include "conexion.php";
+
 if(strlen($_GET['desde'])>0 and strlen($_GET['hasta'])>0){
 	$desde = $_GET['desde'];
 	$hasta = $_GET['hasta'];
@@ -62,4 +64,38 @@ $pdf->Cell(104,8,'',0);
 $pdf->Cell(32,8,'Total Dist: S/. '.$totaldis,0);*/
 
 $pdf->Output('reporte.pdf','D');
+
+
+
+function selectResguardos()
+{
+	$contador=0;
+	echo "<table border='1'>";
+	echo "<tr>
+	<td>No de Solicitud</td>
+	<td>Solicitante</td>
+	<td>Area</td>
+	<td>Fecha/Hora entrega</td>
+	<td>Distribuidor</td>
+	</tr>";
+	$datos = select("SELECT * FROM resguardo_prod");
+	while($fila=mysqli_fetch_array($datos))
+	{
+		$contador++;
+		echo "<tr>
+		<td>".$fila['id_resguardo']."</td>
+		<td>".$fila['pers_cod']."</td>
+		<td>".$fila['are_cod']."</td>
+		<td>".$fila['fecha_entrega']."</td>
+		<td>".$fila['users_cod']."</td>
+		</tr>";
+	}
+	if($contador <=0 ){echo"No hay datos para mostrar.";}
+	echo "</table>";
+}
+
+
+
+
+
 ?>

@@ -66,34 +66,11 @@
   <ul class="main-menu clearfix">  
   <li style="background: red; color: #fff;"><a href="out.php"> CERRAR SESION </a></li>
      
-    <li><a href="#"> Libreria        <span class="drop-icon"></span>
-        <label title="Toggle Drop-down" class="drop-icon" for="pl_1"> </label>            
-      
-        </a>
-                
-                  
-          <input type="checkbox" id="pl_1">
-          <ul class="sub-menu">  
-                 
-              <li>
-                <a href="#">Ayuda<span class="drop-icon"></span>
-                    <label title="Toggle Drop-down" class="drop-icon" for="md_4">  </label>
-                </a>
-                  <input type="checkbox" id="md_4">
-                        <ul class="sub-menu">
-                      <li>
-                        <a href="?pag=cti_user">
-                          Perfil </a>
-                             </li>                                                                
-                            </ul>
-                             </li>
-                        </ul>
-              </li>  
 
-              <li><a href="#" onclick="cargarGenerarSolicitudes();"> Generar Solicitudes<span class="drop-icon"></span>
+        <li><a href="#" onclick="cargarGenerarSolicitudes();"> Generar Solicitudes<span class="drop-icon"></span>
         <label title="Toggle Drop-down" class="drop-icon" for="pl_1"> </label>  
      
-    <li><a href="#"> Almacen Inventarios        <span class="drop-icon"></span>
+       <li><a href="#"> Almacen Inventarios        <span class="drop-icon"></span>
         <label title="Toggle Drop-down" class="drop-icon" for="pl_11"></label>            
       
         </a>                
@@ -101,15 +78,15 @@
           <input type="checkbox" id="pl_11">
           <ul class="sub-menu">  
                  
-              <li>
-                <a href="#">Catalogos<span class="drop-icon"></span>
-                    <label title="Toggle Drop-down" class="drop-icon" for="md_34">  </label>
-                </a>
-                    <input type="checkbox" id="md_34">
-                        <ul class="sub-menu">
-                           <li>
-                            <a href="#pag=pape_marc" onclick="cargarMarcas();">
-                              Marca </a>
+              
+        <li><a href="#">Catalogos<span class="drop-icon"></span>
+        <label title="Toggle Drop-down" class="drop-icon" for="md_34">  </label>
+         </a>
+               <input type="checkbox" id="md_34">
+                 <ul class="sub-menu">
+                    <li>
+                     <a href="#pag=pape_marc" onclick="cargarMarcas();">
+                            Marca </a>
                                       </li>                                                                
                                        <li>
                                         <a href="#pag=pape_mod" onclick="cargarModelos();" >
@@ -136,14 +113,14 @@
                                            Producto</a>
                                       </li> 
                                       <li>
-                                        <a href="?pag=pape_rep">
+                                        <a href="#pag=pape_rep " onclick="cargarReportes();">
                                            Reportes</a>
                                       </li>                                                                                                                                    
                                       </ul>
                                       </li>
                         </ul>
               </li> 
-              <li><a href="#" onclick=>Reportes<span class="drop-icon"></span>
+              <li><a href="#" onclick="">Reportes<span class="drop-icon"></span>
         <label title="Toggle Drop-down" class="drop-icon" for="pl_1"> </label>   
     </ul>
 
