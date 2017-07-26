@@ -159,8 +159,9 @@
 <?php include"forms/frm_actualizar_unimed.php"; ?>
 <?php include"forms/frm_actualizar_clasificacion.php"; ?>
 <?php include"forms/frm_actualizar_producto.php"; ?>
-<?php include"forms/frm_ver_solicitud.php"; ?>
 <?php include"forms/frm_reporte.php"; ?>
+<?php include"forms/frm_ver_solicitud.php"; ?>
+
 
 <script type="text/javascript " src="js/indeex.js"></script>
 <script type="text/javascript " src="js/js_marcas.js"></script>

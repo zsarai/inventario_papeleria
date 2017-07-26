@@ -1,14 +1,17 @@
 //$(document).ready(pagination(1));
 function cargarReportes()
 {
-	$.post('forms/frm_reporte.php',{},function(data){ 
+	
+	$("#modal_frm_reporte").modal('show');
+	/*$.post('forms/frm_reporte.php',{},function(data){ 
 		$("#contenedor_formulario").html(data);
 		$("#contenedor_buscador").html('<input type="text" name="busca" id="busqueda" onkeyup="buscarResguardo(this.value);" placeholder="Buscar ... ">');
-		
-		$.post('control/ctrl_reportes.php?e=selectResguardos',{},function(data){
+	});*/
+
+	/*	$.post('control/ctrl_reportes.php?e=selectResguardos',{},function(data){
 			$("#contenedor").html(data);
 		});
-	});
+	});*/
 }
 
 $(function(){
