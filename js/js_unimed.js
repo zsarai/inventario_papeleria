@@ -97,7 +97,7 @@ function deleteUnidad(id_uni_de_med)
 function buscarUnidad(valor)
 {
 	$.ajax({
-		url:"control/ctrl_uni_med.php?e=searchRecursos&valor="+valor,
+		url:"control/ctrl_uni_med.php?e=searchUnidades&valor="+valor,
 		type:"POST",
 		data:null,
 		contentType:false,
