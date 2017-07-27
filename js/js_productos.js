@@ -57,7 +57,8 @@ function buscarProducto(valor)
 
 function updateProducto(cod_producto)
 {
-	$.ajax({
+	alert(cod_producto);
+	/*$.ajax({
 		url:"control/ctrl_producto.php?e=getProducto&cod_producto="+cod_producto,
 		type:"POST",//método de envio de informacion  POST/GET
 		data:null,//datos q se van a enviar
@@ -68,10 +69,7 @@ function updateProducto(cod_producto)
 		},
 		success:function(data){//se ejecuta si todo salio correctamente
 			
-			if(data=='invalid')//si la respuesta del servidor es invalida se imprime un mensaje en el elemento con id err
-			{
-				$("#err").html('invalid file!');
-			}else{//si no se imprime la informacion en el elemendo con id contenedor
+			alert(data);
 				var json = $.parseJSON(data);
 				$("#txt_cod_producto").prop('value',json.cod_producto);
 				$("#cbo_id_modelo_prod").prop('value',json.id_modelo_prod);
@@ -82,16 +80,17 @@ function updateProducto(cod_producto)
 				$("#cbo_recep_cant_proc").prop('value',json.recep_cant_proc);
 				$("#txt_prod_rec_status").prop('value',json.prod_rec_status);
 				$("#modal_actualizar_producto").modal('show');
-			}
+			
 		},
 		error:function(error){//se ejecuta en caso de un error
 			$("#err").html(error);//se imprime el error en el elemento con id err
 		}
 
-	});
+	});*/
 }
-function deleteProducto(cod_producto)
+function deleteProducto()
 {
+	alert(cod_producto);
 	if(confirm("¿Realmente desea eleminar este registro?"))
 	{
 		$.ajax({
@@ -105,14 +104,6 @@ function deleteProducto(cod_producto)
 		},
 		success:function(data){//se ejecuta si todo salio correctamente
 			var json = $.parseJSON(data);
-				if(json.error<=0)
-				{
-					$("#err").html(json.msg);
-					$("#err").css('background-color', 'green');
-				}else{
-					$("#err").html(json.msg);					
-					$("#err").css('background-color', 'orange');
-				}
 				showMensaje(json.msg);
 				cargarProductos();
 		},

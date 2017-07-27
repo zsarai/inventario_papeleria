@@ -110,11 +110,16 @@ function insertSolicitud()
 						
 						if(insert($consulta))
 						{
-							
+							$dataProd=select("SELECT * FROM producto WHERE cod_producto='".$porciones[0]."'");
+							if($filaProd=mysqli_fetch_array($dataProd))
+							{
+								update("UPDATE producto SET recep_cant_proc=".(intval($filaProd['recep_cant_proc']) - intval($porciones[1]))." WHERE cod_producto='".$porciones[0]."'");
+							}
 						}
 					}
 				}
 			}
+			
 			echo $id_resguardo_fk;
 		}
 	}
@@ -179,7 +184,7 @@ function selectProductos()
 		<td>".$fila['recep_cant_proc']."</td>
 		<td>".$fila['prod_rec_status']."</td>
 		<td>
-		<input type='number' style='width:40px;' value='1' min='1' id='txt_cant_prd_".$fila['cod_producto']."'>
+		<input type='number' style='width:40px;' value='1' min='1' max='".$fila['recep_cant_proc']."' id='txt_cant_prd_".$fila['cod_producto']."'>
 		<button title='Agregar' onclick='agregarProducto(\"".$fila['cod_producto']."\");'>
 		<span class='icon-plus'></span>
 		</button>
