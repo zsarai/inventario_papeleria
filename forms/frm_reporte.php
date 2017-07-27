@@ -9,6 +9,7 @@
             <tr>
                 <td>
                 <select id="cbo_areas" name="are_cod" class="form-control" style="background-color:#002E67; color: white;">
+                <option value="0">--Selecciona Area--</option>
                 <?php 
                 $datos=select("SELECT * FROM areas");
                 while($fila=mysqli_fetch_array($datos))
