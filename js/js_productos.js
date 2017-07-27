@@ -88,7 +88,7 @@ function updateProducto(cod_producto)
 
 	});*/
 }
-function deleteProducto()
+function deleteProducto(cod_producto)
 {
 	alert(cod_producto);
 	if(confirm("¿Realmente desea eleminar este registro?"))
