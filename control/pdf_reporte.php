@@ -62,11 +62,6 @@ $pdf->Cell(0,10,utf8_decode('Listado de solicitudes'),0,1,'C');
 $pdf->SetFont('Arial','',10);
 
 $pdf->SetFillColor(216,216,216);
-/*$pdf->Cell(20,5,utf8_decode('Id resguardo'),1,0,'C',true);
-$pdf->Cell(40,5,utf8_decode('Código de persona'),1,0,'C',true);
-$pdf->Cell(50,5,utf8_decode('Área'),1,0,'C',true);
-$pdf->Cell(30,5,utf8_decode('Fecha de entrega'),1,0,'C',true);
-$pdf->Cell(50,5,utf8_decode('Distribuidor'),1,1,'C',true);*/
 
 
 include "conexion.php";
@@ -302,33 +297,6 @@ if($_GET['are_cod']<=0)//si no se seleciono area se imprimen todas
 	}
 }
 
-/*if($_GET['desde']=='' OR $_GET['hasta']=='')
-{
-	$datos = select("SELECT * FROM resguardo_prod 
-	WHERE are_cod = $_GET[are_cod]
-	ORDER BY fecha_entrega");
-}else
-{
-	$datos = select("SELECT * FROM resguardo_prod 
-	WHERE fecha_entrega BETWEEN '$_GET[desde] 00:00:00' AND '$_GET[hasta] 23:59:59' 
-	AND are_cod = $_GET[are_cod]
-	ORDER BY fecha_entrega");
-}
-
-while($fila=mysqli_fetch_array($datos))
-{
-$fecha = explode(' ',$fila['fecha_entrega']);
-$areaDatos = select("SELECT * FROM areas WHERE id_area=".$fila['are_cod']);
-if($filaArea=mysqli_fetch_array($areaDatos))
-{
-	$areaName=$filaArea['area'];
-}
-$pdf->Cell(20,5,utf8_decode($fila['id_resguardo']),1,0,'C',false);
-$pdf->Cell(40,5,utf8_decode($fila['pers_cod']),1,0,'C',false);
-$pdf->Cell(50,5,utf8_decode($areaName),1,0,'C',false);
-$pdf->Cell(30,5,utf8_decode($fecha[0]),1,0,'C',false);
-$pdf->Cell(50,5,utf8_decode($fila['users_cod']),1,1,'C',false);
-}*/
 
 $pdf->OutPut('Reporte.pdf',"I");
 ?>
