@@ -136,7 +136,7 @@
     
   </div>
 </form> 
-  <a href="#" onclick="eliminarSesion();">Eliminar sesión</a>          
+  <a href="#" onclick=""></a>          
 <form method="post" action="" id="formBusqueda" class="form-style-5" >
 <div id="contenedor_buscador">
     <input type="text" name="busca" id="busqueda" onkeyup="buscarMarca(this.value);" placeholder="Buscar ... ">

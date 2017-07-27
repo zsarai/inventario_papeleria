@@ -45,8 +45,8 @@ function selectProductos()
 		<button title='Actualizar' onclick='updateProducto(\"".$fila['cod_producto']."\");'>
 		<span class='icon-loop2'></span>
 		</button>
-		<button title='Eliminar' onclick='deleteProducto(\"".$fila['cod_producto']."\");'>
-		<span class='icon-bin'></span>
+		<button title='Cambiar estatus' onclick='deleteProducto(\"".$fila['cod_producto']."\",\"".$fila['prod_rec_status']."\");'>
+		<span class='icon-switch'></span>
 		</button>
 		</td>
 		</tr>";
@@ -60,7 +60,7 @@ function getProducto()
 	$datos = select("SELECT * FROM producto p 
 		LEFT JOIN modelo_prod mop ON p.id_modelo_prod=mop.id_modelo_prod
 		LEFT JOIN unidad_de_med_prod ump ON p.id_uni_de_med=ump.id_uni_de_med
-		LEFT JOIN recurso_prod rp ON p.id_recurso=rp.id_recurso WHERE cod_producto=$_GET[cod_producto]");
+		LEFT JOIN recurso_prod rp ON p.id_recurso=rp.id_recurso WHERE cod_producto='$_GET[cod_producto]'");
 	if($fila=mysqli_fetch_array($datos))
 	{
 		echo json_encode(array(
@@ -130,16 +130,22 @@ function updateProducto()
 }
 function deleteProducto()
 {
-	if(update("DELETE FROM producto WHERE cod_producto='$_GET[cod_producto]';"))
+	if($_GET['estatus']=='A')
+	{
+		$sql="UPDATE producto SET prod_rec_status='I' WHERE cod_producto='$_GET[cod_producto]';";
+	}else{
+		$sql="UPDATE producto SET prod_rec_status='A' WHERE cod_producto='$_GET[cod_producto]';";
+	}
+	if(delete($sql))
 	{
 		echo json_encode(array(
-			'msg'=>'Se elimino con éxito',
+			'msg'=>'Estatus actualizado.',
 			'error' =>'0'
 		));
 	}else{
 		echo json_encode(array(
 			'msg'=>'Ocurrió un error durante la operación',
-			'error' =>'1','consulta'=>"DELETE FROM producto WHERE cod_producto=$_GET[cod_producto];"
+			'error' =>'1','consulta'=>$sql
 		));
 	}
 }
@@ -181,8 +187,8 @@ function searchProductos()
 		<button title='Actualizar' onclick='updateProducto(\"".$fila['cod_producto']."\");'>
 		<span class='icon-loop2'></span>
 		</button>
-		<button title='Eliminar' onclick='deleteProducto(\"".$fila['cod_producto']."\");'>
-		<span class='icon-bin'></span>
+		<button title='Cambiar estatus' onclick='deleteProducto(\"".$fila['cod_producto']."\",\"".$fila['prod_rec_status']."\");'>
+		<span class='icon-switch'></span>
 		</button>
 		</td>
 		</tr>";

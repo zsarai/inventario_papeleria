@@ -57,8 +57,7 @@ function buscarProducto(valor)
 
 function updateProducto(cod_producto)
 {
-	alert(cod_producto);
-	/*$.ajax({
+	$.ajax({
 		url:"control/ctrl_producto.php?e=getProducto&cod_producto="+cod_producto,
 		type:"POST",//método de envio de informacion  POST/GET
 		data:null,//datos q se van a enviar
@@ -69,15 +68,15 @@ function updateProducto(cod_producto)
 		},
 		success:function(data){//se ejecuta si todo salio correctamente
 			
-			alert(data);
+			console.log(data);
 				var json = $.parseJSON(data);
 				$("#txt_cod_producto").prop('value',json.cod_producto);
 				$("#cbo_id_modelo_prod").prop('value',json.id_modelo_prod);
 				$("#cbo_id_uni_de_med").prop('value',json.id_uni_de_med);
 				$("#txt_id_recurso").prop('value',json.id_recurso);
 				$("#txt_desc_producto").prop('value',json.desc_producto);
-				$("#cbo_obser_producto").prop('value',json.obser_producto);
-				$("#cbo_recep_cant_proc").prop('value',json.recep_cant_proc);
+				$("#txt_obser_producto").prop('value',json.obser_producto);
+				$("#txt_recep_cant_proc").prop('value',json.recep_cant_proc);
 				$("#txt_prod_rec_status").prop('value',json.prod_rec_status);
 				$("#modal_actualizar_producto").modal('show');
 			
@@ -86,15 +85,14 @@ function updateProducto(cod_producto)
 			$("#err").html(error);//se imprime el error en el elemento con id err
 		}
 
-	});*/
+	});
 }
-function deleteProducto(cod_producto)
+function deleteProducto(cod_producto,estatus)
 {
-	alert(cod_producto);
-	if(confirm("¿Realmente desea eleminar este registro?"))
+	if(confirm("¿Cambiar estatus?"))
 	{
 		$.ajax({
-		url:"control/ctrl_producto.php?e=deleteProducto&cod_producto="+cod_producto,
+		url:"control/ctrl_producto.php?e=deleteProducto&cod_producto="+cod_producto+"&estatus="+estatus,
 		type:"POST",//método de envio de informacion  POST/GET
 		data:null,//datos q se van a enviar
 		contentType:false,

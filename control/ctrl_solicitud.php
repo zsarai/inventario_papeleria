@@ -123,27 +123,7 @@ function insertSolicitud()
 			echo $id_resguardo_fk;
 		}
 	}
-	/*for ($i=0; $i < count($_SESSION); $i++) { 
-		if(isset($_SESSION["producto_".$i]))
-		{
-			$porciones = explode("/",$_SESSION["producto_".$i]);
-			$datos = select("SELECT * FROM producto p LEFT JOIN unidad_de_med_prod udmp ON p.id_uni_de_med=udmp.id_uni_de_med WHERE p.cod_producto='$porciones[0]'");
-			if($fila=mysqli_fetch_array($datos))
-			{
-				//$porciones[0] es el cod producto
-				//$posciones[1] es la cantidad
-				//date('Y-m-d H:i:s'); '9999-12-31 23:59:59'
-				//$_SESSION['pers_cod'] // id del solicitande
-				//$_SESSION['are_cod'] // del solicitante
-				if(insert("INSERT INTO resguardo_prod (pers_cod,are_cod,fecha_entrega,users_cod) VALUES (
-				'$_SESSION[pers_cod]','$_SESSION[are_cod]','".date('Y-m-d H:i:s')."','Código de usuario');"))
-				{
 
-				}
-			}
-			
-		}		
-	}*/
 }
 function eliminarSesion()
 {
@@ -173,6 +153,12 @@ function selectProductos()
 		LEFT JOIN recurso_prod rp ON p.id_recurso=rp.id_recurso ");
 	while($fila=mysqli_fetch_array($datos))
 	{
+		if($fila['prod_rec_status'] == 'A')
+		{
+			$statusVar='';
+		}else{
+			$statusVar='disabled';
+		}
 		$contador++;
 		echo "<tr>
 		<td>".$fila['cod_producto']."</td>
@@ -184,8 +170,8 @@ function selectProductos()
 		<td>".$fila['recep_cant_proc']."</td>
 		<td>".$fila['prod_rec_status']."</td>
 		<td>
-		<input type='number' style='width:40px;' value='1' min='1' max='".$fila['recep_cant_proc']."' id='txt_cant_prd_".$fila['cod_producto']."'>
-		<button title='Agregar' onclick='agregarProducto(\"".$fila['cod_producto']."\");'>
+		<input type='number' style='width:40px;' value='1' min='1' max='".$fila['recep_cant_proc']."' id='txt_cant_prd_".$fila['cod_producto']."' ".$statusVar.">
+		<button title='Agregar' onclick='agregarProducto(\"".$fila['cod_producto']."\");' ".$statusVar.">
 		<span class='icon-plus'></span>
 		</button>
 		</td>
